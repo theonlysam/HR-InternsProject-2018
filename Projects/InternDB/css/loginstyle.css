@@ -5,7 +5,7 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
-  background-color: royalblue;
+  background-color: #428bca;
   color: white;
   border-radius: 20px;
 }
@@ -35,11 +35,14 @@ img{
     
 }
 .navbar{
-    background-color: #21618C;
-        float:none;
+   /* background-color: #21618C;*/
+   
+    background-color: #428bca;
+    float:none;
     margin:0 auto;
     display: block;
     text-align: center;
+
    
 }
 .navbar > h1 {

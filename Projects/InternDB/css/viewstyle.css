@@ -18,7 +18,7 @@ img{
     
 }
 .navbar{
-    background-color: #21618C;
+    background-color: #428bca;
         float:none;
     margin:0 auto;
     display: block;
@@ -34,7 +34,7 @@ img{
 ul.breadcrumb {
     padding: 8px 16px;
     list-style: none;
-    background-color: #21618C;
+    background-color:#428bca;
 
     display: table;
     margin: 0 auto;

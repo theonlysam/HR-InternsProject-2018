@@ -61,11 +61,21 @@ button {
 
 img{
     width: 100px;
+    margin-right: 10px;
+    
 }
 .navbar{
     background-color: #21618C;
+        float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
    
-  
+}
+.navbar > h1 {
+    display: inline-block;
+    float:none;
+    
 }
 
 

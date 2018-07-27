@@ -1,0 +1,43 @@
+.btn-group {
+    float: right;
+    padding-right: 15px
+}
+.form-inline {
+    float: right;
+}
+
+.thead{
+    background-color: #428bca;
+    color: white;
+}
+
+.table-hover tbody tr:hover td {
+    background:#85C1E9  ;
+}
+
+img{
+    width: 100px;
+}
+.navbar{
+    background-color: #428bca;
+   
+  
+}
+.logout {
+    float: right;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+.create-btn {
+    float: right;
+    padding-right: 15px;
+}
+tr:nth-child(even) {
+    background-color:#fbfbfb;
+}

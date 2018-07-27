@@ -10,24 +10,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     
-    <link rel="stylesheet" href="indexstyle.css">
-    <link rel="stylesheet" href="viewstyle.css">
+
+    <link rel="stylesheet" href="css/viewstyle.css">
     
     <title>View</title>
 </head>
 
-<body>
+<body style="background-color: #efefef">
   <nav class="navbar">
     <img src="images/caricom-logo.jpg"> 
       <h1 style="color: white">CARICOM Intern Database</h1>
-             <h1 style="color: #21618C">CARICOM Intern Database</h1>
-      <h1 style="color: #21618C">CARICOM</h1>
+
 </nav>
-  <br>
+<br>
+<div style="text-align: center">
+  <ul class="breadcrumb">
+  <li><a href="index.html">Home</a></li>
 
+  <li>Create Record</li>
+</ul>  
 
+    </div>
+    <br>
     <div class="card mx-auto"style="width: 80rem;">
-      <div class="card-header text-white" style="background-color: #21618C  "><h3>Personal Information</h3></div>
+      <div class="card-header text-white" style="background-color: #428bca  "><h3>Personal Information</h3></div>
       <div class="card-body">
  
         <form class="form-sample">
@@ -212,159 +218,90 @@
 
             
      
-            <div class="card-header text-white" style="background-color: #21618C  "><div class="left"><h3>Internship History</h3></div><div class ="right"><h3>Qualifications</h3></div> </div>
+            
+            
+            
+            
+                        <div class="card-header text-white" style="background-color: #428bca  "><h3>Internship History</h3></div>
           <br>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Intern ID</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
+             <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+                  <tr>
+                    <th>History ID</th>
+                      <th>Area Assigned</th>
+                       <th>Location</th>
+                    <th>Supervisor Name</th>
+                    <th>Start Date</th>
+                   
+                    <th>Stop Date</th>
+                  
+                    
+                      <th>Paid Period</th>
+                      <th>Cost per Month</th>
+                      <th>Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td>1</td>
+                    <td>Jolani</td>
+                    <td>Allie</td>
+                    <td></td>
+                    <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    <td></td>
+                  </tr>
+              </tbody>
+                 </table>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Qualification ID</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-        </div>
+             <div class="card-header text-white" style="background-color: #428bca  "><h3>Qualifications</h3></div>
+          <br>
+              <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+                  <tr>
+                    <th>Qualification ID</th>
+                       <th>Name of Institution</th>
+                    <th>Type of Institution</th>
+                    <th>Level Attained</th>
+                      <th>Year Attained</th>
+                   
+                    <th>Grade</th>
+                    <th>Experience</th>
+                    
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td>1</td>
+                    <td>Jolani</td>
+                    <td>Allie</td>
+                    <td></td>
+                    <td></td>
+                      <td></td>
+                      <td></td>
+               
 
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Location</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
+                  </tr>
+              </tbody>
+                 </table>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Name of Institution</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Supervisor Name</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Type of Institution</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Start Date</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Level Attained</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Stop Date</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Year Attained</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Paid Period</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Grade</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Cost per Month</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Experience</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Comments</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Comments</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-          </div>
-        </div>
+            
+            
+            
+            
+            
+            
+            
+            
         </form>
           <br>
 <a href="index.html"><button class="btn btn-danger btn-rounded">Cancel</button></a>&nbsp;<button  class="btn btn-success btn-rounded">Save</button>
