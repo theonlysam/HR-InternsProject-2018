@@ -1,0 +1,108 @@
+{% extends 'database/base.html' %}
+
+{% block title %}Intern Qualification Edit_Form{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center">
+    <ul class="breadcrumb">
+  
+    <li> <a href="{% url 'home' %}">Home</a></li>
+  
+ 
+
+    <li>Edit Qualifications on Entry</li>
+  </ul>  
+  
+  </div>
+
+</div>
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Qualifications on Entry</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" action="{% url 'update_intern_qualification' key=qualifications_on_entry.pk keyy=personal_information.pk %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <input type="hidden" id="form_check" name="form_check" value="qualificationform">
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Name of Institution</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="NameofInstitution" value="{{ qualifications_on_entry.Name_of_Institution }}" name="NameofInstitution" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Type of Institution</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="TypeofInstitution" value="{{ qualifications_on_entry.Type_of_Institution }}" name="TypeofInstitution">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Level Attained</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Level" value="{{qualifications_on_entry.Level_Attained }}" name="Level" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Year Attained</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Year"  value="{{ qualifications_on_entry.Year_Attained }}" name="Year">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Grade</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Grade"  value="{{qualifications_on_entry.Grade }}" name="Grade" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Experience</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Experience" value="{{ qualifications_on_entry.Experience }}" name="Experience">
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+  
+   
+                        <br>
+                        <div class=" clearfix">
+                          <a href="{% url 'update_intern_qualification' key=qualifications_on_entry.pk keyy=personal_information.pk %}"><button>Go Back</button></a><button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit" >Update</button> 
+        </form>
+      </div>
+      <br>
+
+      
+      </div>
+    </div>
+  
+{% endblock %}

@@ -1,0 +1,318 @@
+{% extends 'database/base.html' %}
+
+{% block content %}
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'home' %}">Home</a></li>
+
+
+  <li>Edit</li>
+
+</ul>  
+<br>
+
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Personal Information</div>
+      <div class="card-body">
+  
+        <form class="form-sample" method="POST">
+ 
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Intern ID</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.pk }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Home Number</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Home_Telephone }}" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">First Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.First_Name }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Mobile Number</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Mobile_Number }}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label"> Last Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Last_Name }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Permanent Address Line 1</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Other Name </label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Other_Name }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Permanent Address Line 2</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Permanent_Address_Line2 }}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+                      <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Gender</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Gender }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">City</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.City }}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                                  <label class="col-sm-3 col-form-label">Date of Birth</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="mm/dd/yyyy" value="{{ personal_information.Date_of_Birth }}"/>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Country</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Country }}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Nationality</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Nationality }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Current Address Line 1</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Current_Address_Line1 }}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+    
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Email }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Current Address Line 2</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Current_Address_Line2 }}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+                      <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Documents</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Documents }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+
+                </div>
+              </div>
+            </div>
+
+
+            
+     
+            
+            
+            
+            
+                        <div class="card-header text-white" style="background-color: #428bca  ">Internship History</div>
+          <br>
+             <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+                 
+                  <tr>
+                    <th>History ID</th>
+                    <th>Type of Internship</th>
+                    <th>Area Assigned</th>
+                    <th>Location</th>
+                    <th>Supervisor Name</th>
+                    <th>Start Date</th>
+                    <th>Stop Date</th>
+                    <th>Paid Period</th>
+                    <th>Stipend Cost per Month</th>
+                    <th>Accomodation Cost per Month</th>
+                    <th>Air Fare</th>
+                    <th>Comments</th>
+                  </tr>
+                 
+                </thead>
+                <tbody>
+                    {% for history in internship_history %}
+                  <tr>
+                    <td>{{ history.pk }}</td>
+                    <td>{{ history.Type_of_Internship }}</td>
+                    <td>{{ history.Area_Assigned }}</td>
+                    <td>{{ history.Location }}</td>
+                    <td>{{ history.Supervisor_name }}</td>
+                    <td>{{ history.Start_date }}</td>
+                    <td>{{ history.Stop_date }}</td>
+                    <td>{{ history.Paid_Period }}</td>
+                    <td>{{ history.Stipend_cost_per_month }}</td>
+                    <td>{{ history.Accomodation_cost_per_month }}</td>
+                    <td>{{ history.Air_Fare }}</td>
+                    <td>{{ history.Comments }}</td> 
+                  </tr>
+                   {% endfor %}
+              </tbody>
+                 </table>
+            </div>
+             <div class="card-header text-white" style="background-color: #428bca  ">Qualifications</div>
+          <br>
+              <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+                  <tr>
+                    <th>Qualification ID</th>
+                    <th>Name of Institution</th>
+                    <th>Type of Institution</th>
+                    <th>Level Attained</th>
+                    <th>Year Attained</th>
+                    <th>Grade</th>
+                    <th>Experience</th>
+                    
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for qualifications in qualifications_on_entry %}
+                  <tr>
+                    <td>{{ qualifications.pk }}</td>
+                    <td>{{ qualifications.Name_of_Institution }}</td>
+                    <td>{{ qualifications.Type_of_Institution }}</td>
+                    <td>{{ qualifications.Level_Attained }}</td>
+                    <td>{{ qualifications.Year_Attained }}</td>
+                    <td>{{ qualifications.Grade }}</td>
+                    <td>{{ qualifications.Experience }}</td>
+                  </tr>
+                  {% endfor %}
+
+                  
+              </tbody>
+                 </table>
+
+                 <div id="myModal" class="modal fade">
+                  <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <div class="icon-box">
+                          
+                        </div>				
+                        <h4 class="modal-title">Are you sure?</h4>	
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Do you really want to delete these records? This process cannot be undone.</p>
+                            </div>
+                            
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-danger" id="trash" >Delete</button>
+                            </div>
+                        
+                    </div>
+                  </div>
+                </div>       
+
+            
+                </form>  
+           
+            </div>
+            
+            <div class="float-right">
+            <a data-toggle="modal" data-target="#myModal" data-dismiss="modal"><button class="btn-danger">Delete</button></a> &nbsp;
+            <a href="{% url 'search' %}"><button class="btn-primary ">Back</button></a>
+          </div>
+
+        
+ 
+           
+{% endblock %}        
+ 

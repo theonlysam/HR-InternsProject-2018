@@ -1,0 +1,110 @@
+{% extends 'database/basex.html' %}
+
+{% block title %}X-Employee Degrees Edit_Form{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'homex' %}">Home</a></li>
+
+  <li>Edit Degree Information</a></li>
+
+</ul>  
+
+</div>
+
+</div>
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Employee Degrees</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" action="{% url 'update_xemployee_degrees' keyx=employment_degrees.pk keyyx=past_employees.pk %}" method="POST">
+            {% csrf_token %}
+
+              <input type="hidden" id="form_check" name="one"/>
+ 
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Degree Acronym</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="DegreeAcronym" value="{{ employment_degrees.Degree_Acronym }}" name="DegreeAcronym" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Degree Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Area"  value="{{ employment_degrees.Degree_Name }}" name="DegreeName">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Institution Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="InstitutionName"  value="{{ employment_degrees.Institution_Name }}"  name="InstitutionName" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Country</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="country"  value="{{ employment_degrees.Country }}" name="country">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"> Start Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Start"  value="{{employment_degrees.Start_date }}" name="Start" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">End Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="End" value="{{ employment_degrees.End_date }}" name="End">
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+      
+   
+                        <br>
+                        <div class=" clearfix">
+                          <a href="{% url 'update_xemployee_degrees' keyx=employment_degrees.pk keyyx=past_employees.pk %}"><button>Go Back</button></a>    <button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit">Update</button> 
+        </form>
+     
+      </div>
+
+      <br>
+
+     
+      </div>
+    </div>
+  
+{% endblock %}

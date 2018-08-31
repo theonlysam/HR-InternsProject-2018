@@ -1,0 +1,355 @@
+ 
+{% extends 'database/basex.html' %}
+
+{% block content %}
+<style>
+input[type=text], select, textarea {
+
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+</style>
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'homex' %}">Home</a></li>
+
+  <li><a href="{% url 'newx' %}">Create Past Employee</a></li>
+  <li>Create Employment History</a></li>
+  <li>Create Employee Degree</a></li>
+</ul>  
+
+</div>
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Past Employee Information</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="hidden" id="form_check" name="form_check" value="new">
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">File Number</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="FNUM" name="FNUM"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Reason for Departure</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="ROD" name="ROD"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Title</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="title" name="title"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Status</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JS" name="JS"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">First Name<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="FN" name="FN" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Summary of Performance</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="SOP" name="SOP"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Middle Name </label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="MN" name="MN"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Summary of Performance 1</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="SOP1" name="SOP1"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+                 <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Last Name<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="LN" name="LN" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Summary of Performance 2</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="SOP2" name="SOP2"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+                        <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Gender</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="GEN" name="GEN">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Summary of Performance 3</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="SOP3" name="SOP3"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Date of Birth</label>
+                  <div class="col-sm-9">
+                    <input class="form-control" placeholder="mm/dd/yyyy" id="DOB" name="DOB"/>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Summary of Performance 4</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="SOP4" name="SOP4"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Nationality</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="NAT" name="NAT"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Highest Level of Education</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id='HLE' name="HLE"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+      
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Date of Employment</label>
+                  <div class="col-sm-9">
+                    <input class="form-control" placeholder="mm/dd/yyyy" id="DE" name="DE"/>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Special Comments</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="SC" name="SC"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+               <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Place Recruited</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="PR" name="PR"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Final Salary<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="FS" name="FS" required/>
+                  </div>
+                </div>
+              </div>
+            </div>
+   
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Departure Date</label>
+                  <div class="col-sm-9">
+                    <input class="form-control" placeholder="mm/dd/yyyy" id="DD" name="DD"/>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Final Allowance<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="FA" name="FA" required/>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+               <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Qualification on Entry</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="QE" name="QE"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Created Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="CD" name="CD"/>
+                  </div>
+                </div>
+              </div>
+            </div>   
+              
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Created By</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="CB" name="CB"/>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Verified By</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="VB" name="VB"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Verified</label>
+                  <div class="col-sm-9">
+                     <input type="text" class="form-control" id="V" name="V"/>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Verified Date</label>
+                  <div class="col-sm-9">
+                      <input class="form-control" placeholder="mm/dd/yyyy" id="VD" name="VD"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+                        <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Remarks</label>
+                  <div class="col-sm-9">
+                     <input type="text" class="form-control" id="R" name="R"/>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Documents<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="file" class="form-control" id="Documents" name="Documents" required>
+                  </div>
+                </div>
+              </div>
+       </div>
+       <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row">
+              
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row">
+
+              </div>
+            </div>
+          </div><button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit" value="submit">Save</button> 
+        </form>
+        </div>   
+          </div>  
+    
+                        <br>
+          
+      </div>
+    </div>
+    </div>
+  
+{% endblock %}

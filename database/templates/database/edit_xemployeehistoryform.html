@@ -1,0 +1,153 @@
+{% extends 'database/basex.html' %}
+
+{% block title %}X-Employee History Edit_Form{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'homex' %}">Home</a></li>
+
+
+  <li>Create Past Employee History</a></li>
+
+</ul>  
+
+</div>
+
+</div>
+
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Past Employees</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" action="{% url 'update_xemployee_history' keyx=employment_history.pk keyyx=past_employees.pk %}" method="POST"/>
+            {% csrf_token %}
+
+              <input type="hidden" id="form_check" name="one"/>
+ 
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"> Job Title</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JobTitle" value="{{ employment_history.Job_Title }}" name="JobTitle" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Period</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JobPeriod" value="{{ employment_history.Job_Period }}" name="JobPeriod"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Description</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JobDescription"  value="{{ employment_history.Job_Description }}"  name="JobDescription" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Achievements</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Achievements"  value="{{ employment_history.Achievements }}" name="Achievement"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Salary</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Salary"  value="{{ employment_history.Salary }}" name="salary" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Level</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JobLevel" value="{{ employment_history.Job_Level}}" name="JobLevel"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Step</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Jobstep" value="{{ employment_history.Job_Step }}" name="JobStep"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Start Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Start" value="{{ employment_history.Start_date }}" name="Start"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+              
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">End</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="End" value="{{  employment_history.End_date }}" name="End"/>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"></label>
+                  <div class="col-sm-9">
+          
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+      
+   
+                        <br>
+                        <div class=" clearfix">
+                          <a href="{% url 'update_xemployee_history' keyx=employment_history.pk keyyx=past_employees.pk %}"><button>Go Back</button></a> <button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit">Update</button> 
+        </form>
+      </div>
+
+      <br>
+
+
+      </div>
+    </div>
+  
+{% endblock %}

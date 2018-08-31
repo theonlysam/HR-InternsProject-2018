@@ -1,0 +1,170 @@
+{% extends 'database/base.html' %}
+
+{% block title %}Internship History Edit_Form{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'home' %}">Home</a></li>
+
+
+  <li>Edit Internship History</li>
+
+</ul>  
+
+</div>
+
+</div>
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Internship History</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" action="{% url 'update_intern_history' key=internship_history.pk keyy=personal_information.pk %}" method="POST">
+            {% csrf_token %}
+
+              <input type="hidden" id="form_check" name="one"/>
+ 
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Type of Internship</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="TypeofInternship" value="{{ internship_history.Type_of_Internship }}" name="TypeofInternship" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Area Assigned</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Area"  value="{{ internship_history.Area_Assigned }}" name="Area">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Location</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Location"  value="{{ internship_history.Location }}"  name="Location" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Supervisor Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Supervisor"  value="{{ internship_history.Supervisor_name }}" name="Supervisor">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"> Start Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Start"  value="{{ internship_history.Start_date }}" name="Start" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Stop Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Stop" value="{{ internship_history.Stop_date }}" name="Stop">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Paid Period</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="PaidPeriod" value="{{ internship_history.Paid_Period }}" name="PaidPeriod">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Stipend Cost per Month</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Stipend" value="{{ internship_history.Stipend_cost_per_month }}" name="Stipend"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+                        <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Accomodation Cost</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Accomodation" value="{{ internship_history.Accomodation_cost_per_month }}" name="Accomodation"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Air Fare</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="AirFare" value="{{ internship_history.Air_Fare }}" name="AirFare"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Comments</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Comments" value="{{ internship_history.Comments }}" name="Comments"/>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"></label>
+                  <div class="col-sm-9">
+          
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+      
+   
+                        <br>
+                        <div class=" clearfix">
+                          <a href="{ % url 'update_intern_history' key=internship_history.pk keyy=personal_information.pk % }"><button>Go Back</button></a><button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit">Update</button> 
+        </form>
+      </div>
+
+      <br>
+
+     
+      </div>
+    </div>
+  
+{% endblock %}

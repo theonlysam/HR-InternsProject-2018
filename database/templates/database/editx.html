@@ -1,0 +1,405 @@
+{% extends 'database/basex.html' %}
+
+{% block title %}Edit_RecordX{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'homex' %}">Home</a></li>
+
+
+  <li>Edit</a></li>
+</ul>  
+
+</div>
+<br>
+<div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Past Employees</div>
+      <div class="card-body">
+  
+        <form action="{% url 'update_recordx' keyx=past_employees.pk %}" method="POST" class="form-sample">
+          {% csrf_token %}
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Past Employee ID</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.pk }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Job Status</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Job_Status }}" name="one"/>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">File Number</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.File_Number }}" name="two"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Date of Employment</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Date_of_Employment }}" name="three"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Title</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Title }}" name="four"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Place of Recruitment</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Place_of_Recruitment }}" name="five"/>
+                </div>
+              </div>  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">First Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.First_Name }}" name="six"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Date of Departure</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Date_of_Departure }}" name="seven"/>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+                      <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Last Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Last_Name }}" name="eight">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Reason for Departure</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Reason_for_Departure }}" name="nine"/>
+                </div>
+              </div>
+            </div>
+          </div> 
+            
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                                  <label class="col-sm-3 col-form-label">Middle Name</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="mm/dd/yyyy" value="{{ past_employees.Middle_Name }}" name="ten"/>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Final Salary</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Final_Salary }}" name="eleven"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Gender</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Gender }}" name="twelve"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Final Allowance</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Final_Allowance }}" name="thirteen"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+    
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label"> Date of Birth</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Date_of_Birth }}" name="fourteen"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Summary of Performance</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ past_employees.Summary_of_Performance }}" name="fifteen"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Nationality</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" value="{{ past_employees.Nationality }}" name="sixteen"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Summary of Performance 1</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" value="{{ past_employees.Summary_of_Performance1 }}" name="seventeen"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Highest Level of Education</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" value="{{ past_employees.Highest_Level_of_Education}}" name="eighteen"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Summary of Performance 2</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" value="{{ past_employees.Summary_of_Performance2 }}" name="nineteen"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Qualifications on Entry</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" value="{{ past_employees.Qualifications_on_Entry }}" name="twenty"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Summary of Performance 3</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" value="{{ past_employees.Summary_of_Performance3 }}" name="twentyone"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="row">
+                  <div class="col-md-6">
+                     <div class="form-group row">
+                       <label class="col-sm-3 col-form-label">Created By</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" value="{{ past_employees.Created_By }}" name="twentytwo"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Summary of Performance 4</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" value="{{ past_employees.Summary_of_Performance4 }}" name="twentythree"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>     
+
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Created Date</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" value="{{ past_employees.Created_Date }}" name="twentyfour"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Special Comments - Disciplinary/Commendation</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" value="{{ past_employees.Special_Comments_Disciplinary_or_Commendation }}" name="twentyfive"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Verified</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" value="{{ past_employees.Verified }}" name="twentysix"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Verified By</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" value="{{ past_employees.Verified_By }}" name="twentyseven"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                              <label class="col-sm-3 col-form-label">Remarks</label>
+                              <div class="col-sm-9">
+                                <input type="text" class="form-control" value="{{ past_employees.Remarks }}" name="twentyeight"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                              <label class="col-sm-3 col-form-label">Verified Date</label>
+                              <div class="col-sm-9">
+                                <input type="text" class="form-control" value="{{ past_employees.Verified_Date }}" name="twentynine"/>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <button type="submit" class="btn btn-success btn-rounded float-right">Update record</button> 
+                        <br> <br> <br>
+        
+     
+            
+                        <div class="card-header text-white" style="background-color: #428bca  ">Employment History</div>
+          <br>
+             <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+                 
+                  <tr>
+            
+                    <th>Job Title</th>
+                    <th>Job Period</th>
+                    <th>Job Description</th>
+                    <th>Achievements</th>
+                    <th>Salary</th>
+                    <th>Job Level</th>
+                    <th>Job_Step</th>
+                    <th>Start_date</th>
+                    <th>End_date</th>
+                  </tr>
+                 
+                </thead>
+                <tbody>
+                    {% for history in employment_history %}
+                  <tr>
+                    
+                    <td><a href="{% url 'edit_xemployee_history' keyx=history.pk keyyx=past_employees.pk %}">{{ history.Job_Title }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_history' keyx=history.pk keyyx=past_employees.pk %}">{{ history.Job_Period }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_history' keyx=history.pk keyyx=past_employees.pk %}">{{ history.Job_Description }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_history' keyx=history.pk keyyx=past_employees.pk %}">{{ history.Achievements }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_history' keyx=history.pk keyyx=past_employees.pk %}">{{ history.Salary }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_history' keyx=history.pk keyyx=past_employees.pk %}">{{ history.Job_Level }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_history' keyx=history.pk keyyx=past_employees.pk %}">{{ history.Job_Step }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_history' keyx=history.pk keyyx=past_employees.pk %}">{{ history.Start_date }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_history' keyx=history.pk keyyx=past_employees.pk %}">{{ history.End_date }}</a></td>
+                    
+                  </tr>
+                   {% endfor %}
+              </tbody>
+                 </table>
+            </div>
+             <div class="card-header text-white" style="background-color: #428bca  ">Employee Degrees</div>
+          <br>
+              <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+                  <tr>
+               
+                    <th>Degree Acronym</th>
+                    <th>Degree Name</th>
+                    <th>Institution Name</th>
+                    <th>Country</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for degrees in employee_degrees %}
+                  <tr>
+                   
+                    <td><a href="{% url 'edit_xemployee_degrees' keyx=degrees.pk keyyx=past_employees.pk %}">{{ degrees.Degree_Acronym }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_degrees' keyx=degrees.pk keyyx=past_employees.pk %}">{{ degrees.Degree_Name}}</a></td>
+                    <td><a href="{% url 'edit_xemployee_degrees' keyx=degrees.pk keyyx=past_employees.pk %}">{{ degrees.Institution_Name}}</a></td>
+                    <td><a href="{% url 'edit_xemployee_degrees' keyx=degrees.pk keyyx=past_employees.pk %}">{{ degrees.Country }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_degrees' keyx=degrees.pk keyyx=past_employees.pk %}">{{ degrees.Start_date }}</a></td>
+                    <td><a href="{% url 'edit_xemployee_degrees' keyx=degrees.pk keyyx=past_employees.pk %}">{{ degrees.End_date }}</a></td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+                 </table>
+            </div>
+            
+
+         
+            </div>
+            
+            
+       
+               
+            
+        </form>
+
+{% endblock %}        
+ 
