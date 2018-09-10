@@ -1,0 +1,125 @@
+{% extends 'database/base.html' %}
+
+{% block content %}
+
+<div style="text-align: center">
+    <ul class="breadcrumb">
+  
+    <li> <a href="{% url 'home' %}">Home</a></li>
+  
+    <li><a href="{% url 'new' %}">Create Personal Information</a></li>
+    <li><a href="{% url 'history' %}">Create Internship History</a></li>
+    <li><a href="{% url 'qualification' %}">Create Qualifications on Entry</a></li>
+  </ul>  
+  
+  </div>
+
+</div>
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Qualifications on Entry</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" method="POST" enctype="multipart/form-data">
+ 
+            <input type="hidden" id="form_check" name="form_check" value="qualificationform">
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Name of Institution</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="NameofInstitution" name="NameofInstitution" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Type of Institution</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="TypeofInstitution" name="TypeofInstitution">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Level Attained</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Level" name="Level" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Year Attained</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Year" name="Year">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Grade</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Grade" name="Grade" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Experience</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Experience" name="Experience">
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"></label>
+                  <div class="col-sm-9">
+             
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"></label>
+                  <div class="col-sm-9">
+             
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+  
+   
+                        <br>
+                        <div class=" clearfix">
+          <button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit" value="submit">Save</button> 
+        </form>
+      </div>
+      <br>
+        <a href="{% url 'home' %}"><button class="btn btn-primary btn-rounded">Finish</button></a>
+      
+      </div>
+    </div>
+  
+{% endblock %}

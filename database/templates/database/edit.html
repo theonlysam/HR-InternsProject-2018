@@ -1,0 +1,292 @@
+{% extends 'database/base.html' %}
+
+{% block title %}Edit_Record{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'home' %}">Home</a></li>
+
+
+  <li>Edit</li>
+
+</ul>  
+<br>
+
+</div>
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Personal Information</div>
+      <div class="card-body">
+  
+        <form action="{% url 'update_record' key=personal_information.pk%}" method="POST" class="form-sample">
+          {% csrf_token %}
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Intern ID</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.pk }}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Home Number</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Home_Telephone }}" name="one"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">First Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.First_Name }}" name="two"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Mobile Number</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Mobile_Telephone }}" name="three"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label"> Last Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Last_Name }}" name="four"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Permanent Address Line 1</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Permanent_Address_Line1 }}" name="five"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Other Name </label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Other_Name }}" name="six"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Permanent Address Line 2</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Permanent_Address_Line2 }}" name="seven"/>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+                      <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Gender</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Gender }}" name="eight"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">City</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.City }}" name="nine"/>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                                  <label class="col-sm-3 col-form-label">Date of Birth</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="YYYY-MM-DD" value="{{ personal_information.Date_of_Birth }}" name="ten"/>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Country</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Country }}" name="eleven"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Nationality</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Nationality }}" name="twelve"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Current Address Line 1</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Current_Address_Line1 }}"name="thirteen" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+    
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Email }}" name="fourteen"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Current Address Line 2</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Current_Address_Line2 }}"name="fifteen" />
+                </div>
+              </div>
+            </div>
+          </div>
+                      <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Documents</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" value="{{ personal_information.Documents }}" name="sixteen"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+
+                </div>
+              </div>
+            </div>
+
+
+            
+     
+            <button type="submit" class="btn btn-success btn-rounded">Update record</button><br><br><br>
+            
+            
+            
+                        <div class="card-header text-white" style="background-color: #428bca  ">Internship History</div>
+          <br>
+             <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+
+       
+                    <th>History ID</th>
+                    <th>Type of Internship</th>
+                    <th>Area Assigned</th>
+                    <th>Location</th>
+                    <th>Supervisor Name</th>
+                    <th>Start Date</th>
+                    <th>Stop Date</th>
+                    <th>Paid Period</th>
+                    <th>Stipend Cost per Month</th>
+                    <th>Accomodation Cost per Month</th>
+                    <th>Air Fare</th>
+                    <th>Comments</th>
+                  </a></tr>
+                 
+                </thead>
+                <tbody>
+                    {% for history in internship_history %}
+                  <tr>
+            
+                  
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.pk }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Type_of_Internship }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Location }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Area_Assigned }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Supervisor_name }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Start_date }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Stop_date }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Paid_Period }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Stipend_cost_per_month }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Accomodation_cost_per_month }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Air_Fare }}</a></td>
+                    <td><a href="{% url 'edit_intern_history' key=history.pk keyy=personal_information.pk %}">{{ history.Comments }}</a></td>
+                  </tr>
+                   {% endfor %}
+              </tbody>
+                 </table>
+            </div>
+             <div class="card-header text-white" style="background-color: #428bca  ">Qualifications</div>
+          <br>
+              <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+                  <tr>
+                    <th>Qualification ID</th>
+                    <th>Name of Institution</th>
+                    <th>Type of Institution</th>
+                    <th>Level Attained</th>
+                    <th>Year Attained</th>
+                    <th>Grade</th>
+                    <th>Experience</th>
+                    
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for qualifications in qualifications_on_entry %}
+                  <tr>
+                    <td><a href="{% url 'edit_intern_qualification' key=qualifications.pk keyy=personal_information.pk%}">{{ qualifications.pk }}</a></td>
+                    <td><a href="{% url 'edit_intern_qualification' key=qualifications.pk keyy=personal_information.pk%}">{{ qualifications.Name_of_Institution }}</a></td>
+                    <td><a href="{% url 'edit_intern_qualification' key=qualifications.pk keyy=personal_information.pk%}">{{ qualifications.Type_of_Institution }}</a></td>
+                    <td><a href="{% url 'edit_intern_qualification' key=qualifications.pk keyy=personal_information.pk%}">{{ qualifications.Level_Attained }}</a></td>
+                    <td><a href="{% url 'edit_intern_qualification' key=qualifications.pk keyy=personal_information.pk%}">{{ qualifications.Year_Attained }}</a></td>
+                    <td><a href="{% url 'edit_intern_qualification' key=qualifications.pk keyy=personal_information.pk%}">{{ qualifications.Grade }}</a></td>
+                    <td><a href="{% url 'edit_intern_qualification' key=qualifications.pk keyy=personal_information.pk%}">{{ qualifications.Experience }}</a></td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+                 </table>
+            </div> 
+
+          
+            
+        </form>
+        <a href="{% url 'search' %}" class="float-right"><button class="btn-primary">Back</button></a>
+        
+
+{% endblock %}        
+ 

@@ -1,0 +1,50 @@
+.create-btn{
+  float: left;
+  margin-left: 15px;
+}
+.btn {
+  float: right;
+  margin-right: 15px;
+}
+.card-header{
+    text-align: center;
+    font-size: 18px;
+}
+.left{ float:left;
+}
+
+img{
+    width: 100px;
+    margin-right: 10px;
+    
+}
+.navbar{
+    background-color: #428bca;
+        float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+   
+}
+.navbar > h1 {
+    display: inline-block;
+    float:none;
+    
+}
+
+ul.breadcrumb {
+    padding: 8px 16px;
+    list-style: none;
+    background-color:#428bca;
+
+    display: table;
+    margin: 0 auto;
+    color: lightgray;
+}
+ul.breadcrumb li {display: inline;}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: white;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {color: white;}

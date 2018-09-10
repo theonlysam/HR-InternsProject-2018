@@ -1,0 +1,209 @@
+ 
+{% extends 'database/base.html' %}
+
+{% block content %}
+<style>
+input[type=text], select, textarea {
+
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+</style>
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'home' %}">Home</a></li>
+
+  <li><a href="{% url 'new' %}">Create Personal Information</a></li>
+  <li>Create Internship History</a></li>
+  <li>Create Qualifications on Entry</a></li>
+</ul>  
+
+</div>
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Personal Information</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="hidden" id="form_check" name="form_check" value="new">
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Documents<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="file" class="form-control" id="Documents" name="Documents" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Home Number</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="HomeNumber" name="HomeNumber">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">First Name<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="First_Name" name="First_Name" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Mobile Number</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="MobileNumber" name="MobileNumber">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"> Last Name<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Last_Name" name="Last_Name" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Permanent Address Line 1</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="PermanentAddressLine1" name="PermanentAddressLine1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Other Name </label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Other_Name" name="Other_Name">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Permanent Address Line 2</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="PermanentAddressLine2" name="PermanentAddressLine2">
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+                        <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Gender<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="Gender" name="Gender" required>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">City</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="City" name="City">
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Date of Birth<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input class="form-control" id="DOB" placeholder="yyyy-mm-dd" name="DOB" required>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Country<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Country" name="Country" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Nationality<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Nationality" name="Nationality" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Current Address Line 1<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="CurrentAddressLine1" name="CurrentAddressLine1" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+      
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Email</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Email" name="Email">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Current Address Line 2<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="CurrentAddressLine2" name="CurrentAddressLine2" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            
+    
+                        <br>
+          <button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit" value="submit">Save</button> 
+        </form>
+      </div>
+    </div>
+  
+{% endblock %}

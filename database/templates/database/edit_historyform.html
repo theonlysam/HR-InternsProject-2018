@@ -1,0 +1,168 @@
+{% extends 'database/base.html' %}
+
+{% block content %}
+
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'home' %}">Home</a></li>
+
+  <li><a href="{% url 'new' %}">Create Personal Information</a></li>
+  <li><a href="{% url 'history' %}">Create Internship History</a></li>
+  <li>Create Qualifications on Entry</a></li>
+</ul>  
+
+</div>
+
+</div>
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Internship History</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" method="POST">
+
+
+              <input type="hidden" id="form_check" name="form_check" value="historyform">
+ 
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Type of Internship</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="TypeofInternship" name="TypeofInternship" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Area</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Area" name="Area">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Location</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Location" name="Location" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Supervisor</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Supervisor" name="Supervisor">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"> Start Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Start" name="Start" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Stop Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Stop" name="Stop">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Paid Period</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="PaidPeriod" name="PaidPeriod">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Stipend Cost per Month</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Stipend" name="Stipend">
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+                        <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Accomodation Cost</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Accomodation" name="Accomodation">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Air Fare</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="AirFare" name="AirFare">
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Comments</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Comments" name="Comments">
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"></label>
+                  <div class="col-sm-9">
+          
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+      
+  
+   
+                        <br>
+                        <div class=" clearfix">
+          <button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit">Save</button> 
+        </form>
+      </div>
+      <br>
+        <a href="{% url 'qualification' %}"><button class="btn btn-primary btn-rounded ">Continue</button></a>
+     
+      </div>
+    </div>
+  
+{% endblock %}

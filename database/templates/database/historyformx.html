@@ -1,0 +1,146 @@
+{% extends 'database/basex.html' %}
+
+{% block content %}
+
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'homex' %}">Home</a></li>
+
+  <li><a href="{% url 'newx' %}">Create Past Employee</a></li>
+  <li><a href="{% url 'historyx' %}">Create Employment History</a></li>
+  <li>Create Employee Degree</li>
+</ul>  
+
+</div>
+
+</div>
+
+</div>
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Employment History</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" method="POST">
+
+
+              <input type="hidden" id="form_check" name="form_check" value="historyform">
+ 
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Title<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JT" name="JT" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Period<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JP" name="JP" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Description<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JD" name="JD" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Achievements</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="A" name="A">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"> Salary<span style="color: red">*</span></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="S" name="S" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Level</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JL" name="JL">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Job Step</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="JS" name="JS">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Start Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="SD" name="SD">
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+                        <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">End Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="ED" name="ED">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+
+                  </div>
+                </div>
+              </div>
+
+              
+
+      
+  
+   
+                        <br>
+                        <div class=" clearfix">
+          <button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit">Save</button> 
+        </form>
+      </div>
+      <br>
+        <a href="{% url 'employee_degreex' %}"><button class="btn btn-primary btn-rounded ">Continue</button></a>
+     
+      </div>
+    </div>
+  
+{% endblock %}
