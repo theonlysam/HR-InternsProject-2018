@@ -1,0 +1,82 @@
+
+.container-fluid {
+  width: 100%;  
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #21618C ;
+
+}
+
+.wrap-container {
+  width: 500px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  padding: 70px;
+}
+.meh h1 {
+  
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 30px;
+}
+button {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  background-color: royalblue;
+  color: white;
+  border-radius: 20px;
+}
+.btn-group {
+    float: right;
+    padding-right: 15px
+}
+.form-inline {
+    float: right;
+}
+.create-btn {
+    float: right;
+    padding-right: 15px;
+}
+.thead{
+    background-color: #21618C;
+    color: white;
+}
+
+.table-hover tbody tr:hover td {
+    background:#85C1E9  ;
+}
+
+img{
+    width: 100px;
+    margin-right: 10px;
+    
+}
+.navbar{
+    background-color: #21618C;
+        float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+   
+}
+.navbar > h1 {
+    display: inline-block;
+    float:none;
+    
+}
+
+
+

@@ -1,0 +1,60 @@
+
+button {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  background-color: #428bca;
+  color: white;
+  border-radius: 20px;
+}
+.btn-group {
+    float: right;
+    padding-right: 15px
+}
+.form-inline {
+    float: right;
+}
+.create-btn {
+    float: right;
+    padding-right: 15px;
+}
+.thead{
+    background-color: #21618C;
+    color: white;
+}
+
+.table-hover tbody tr:hover td {
+    background:#85C1E9  ;
+}
+
+img{
+    width: 100px;
+    margin-right: 10px;
+    
+}
+.navbar{
+   /* background-color: #21618C;*/
+   
+    background-color: #428bca;
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+
+   
+}
+.navbar > h1 {
+    display: inline-block;
+    float:none;
+    
+}
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-top: 60px; /* Added */
+}
+
+
+
